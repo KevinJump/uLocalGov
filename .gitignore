@@ -1,6 +1,22 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
+# Umbraco
+src/WebApp/App_Browsers/
+src/WebApp/App_Code/
+src/WebApp/App_Data/
+src/WebApp/aspnet_client/
+src/WebApp/media/created-packages/
+src/WebApp/media/*/Cached/
 
-# mstest test results
-TestResults
+# Visual Studio
+[Oo]bj
+[Bb]in
+*.user
+*.suo
+*.[Cc]ache
+*.bak
+*.ncb
+*.log 
+*.DS_Store
+[Tt]humbs.db 
+_ReSharper.*
+*.resharper
+Ankh.NoLoad
