@@ -1,85 +1,75 @@
 /* site layout and design stylesheet */
 
 
-/* header { padding: 0.5em 0; } */
-
-
-/* site stuff */
-ul.helpers { list-style: none; margin: 0; padding: 0; font-size: 0.8em;}
-ul.helpers > li { display: inline; margin: 0; padding: 0;}
-ul.helpers > li:after { content: ', '; } 
-
-.search-box { margin: 1em 0; }
-
-ul.site-tabs { margin-bottom: 0; }
-ul.site-tabs > li.active > a { background-color: #eee; }
-
-.site-menu > .navbar-inner { 
-	background: none; 
-	background-color: #EEE;
-	border: none;
-	box-shadow: none;
-	border-radius: 0;
+.search-box { 
+	margin-top: 1em;
 }
 
-.site-menu > .navbar-inner .icon-bar { 
-	background-color: #000; 
-	box-shadow: none; 
-}  
+/* --------
+   Landing Pages : pages with big links that help users get to what they want
+   -------- */
 
-/* footer */
-.footer  {
-	background-color: #eee;
-	margin-bottom: 2em;
-	padding-bottom: 1em;
+.landingItem {
+  padding: 2em;
+  border: 1px solid transparent;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px ;
+  border-radius: 8px;
 }
 
-.footer ul { 
-	margin: 1em; 
-	list-style: none; 
-} 
+.landingItem:Hover {
+  background-color: #f5f5f5; 
+}
 
+.landingLink:Hover { 
+  text-decoration: none;
+}
 
+.landingLink > .icon48 {
+  float: left ; 
+}
 
-/* homepage stuff */
-.sectionList ul
+.landingLink > .landingText {
+  margin-left: 55px;
+  display: block;
+}
+
+.landingList > h3 > a 
 {
-	list-style: none; 
+  padding:0 12px 0 0;
+  margin:0 20px 0 0;
+  background:url(/images/crumb.gif) no-repeat right center;
+  color:#444;
+  font-weight:bold;   
 }
 
-.sectionList ul > li {
-	display: inline ; 
-	
+.landingText > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.sectionList ul > li:after { content: ', '; }
+.landingText > ul > li { 
+  display: inline ; 
+}
 
+ul.moreLinks{
+  liststyle: none; 
+}
 
+.moreLinks > li {
+  display: block ; 
+  float: left;
+  padding: 4px 10px;
+  background:url(/images/crumb.gif) no-repeat right center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.icon48 {
+  background-image:url(/images/icons/right.png);
+  width:48px;
+  height:48px;
+  display:block;
+}
 
 
 

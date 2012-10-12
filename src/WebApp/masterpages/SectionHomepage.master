@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Site-Design.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
+	<!-- homepage no breadcrumb -->
+</asp:content>
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<div class="row">
+		<div class="span12">
+			<div class="hero-unit">
+				<h2>Section <umbraco:Item field="sectionName" runat="server" /></h2>
+				<umbraco:Item field="pageContent" runat="server" />
+			</div>
+		</div>
+	</div>
+</asp:content>

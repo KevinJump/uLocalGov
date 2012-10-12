@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Site-Design.master" AutoEventWireup="true" %>
+
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<div class="row">
+		<div class="span3">
+			<div class="well hidden-phone">
+				<umbraco:Macro Alias="ULocalGov.SideNavigation" runat="server"></umbraco:Macro>
+			</div>
+		</div>
+		<div class="span6">
+			<h2><umbraco:Item field="pageTitle" runat="server" /></h2>
+			<umbraco:Item field="pageContent" runat="server" />
+		</div>
+	</div>
+	
+</asp:content>
