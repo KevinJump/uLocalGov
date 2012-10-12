@@ -9,9 +9,8 @@ src/WebApp/Umbraco/
 src/WebApp/data/
 src/WebApp/install/
 src/WebApp/umbraco_client/
-src/WebApp/config/
-src/WebApp/bin/
-src/WebApp/bin/
+src/WebApp/config/*
+src/WebApp/bin/*
 src/WebApp/default.aspx
 
 # put some back in

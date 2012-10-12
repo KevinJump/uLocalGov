@@ -1,0 +1,89 @@
+/* site layout and design stylesheet */
+
+
+/* header { padding: 0.5em 0; } */
+
+
+/* site stuff */
+ul.helpers { list-style: none; margin: 0; padding: 0; font-size: 0.8em;}
+ul.helpers > li { display: inline; margin: 0; padding: 0;}
+ul.helpers > li:after { content: ', '; } 
+
+.search-box { margin: 1em 0; }
+
+ul.site-tabs { margin-bottom: 0; }
+ul.site-tabs > li.active > a { background-color: #eee; }
+
+.site-menu > .navbar-inner { 
+	background: none; 
+	background-color: #EEE;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.site-menu > .navbar-inner .icon-bar { 
+	background-color: #000; 
+	box-shadow: none; 
+}  
+
+/* footer */
+.footer  {
+	background-color: #eee;
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+}
+
+.footer ul { 
+	margin: 1em; 
+	list-style: none; 
+} 
+
+
+
+/* homepage stuff */
+.sectionList ul
+{
+	list-style: none; 
+}
+
+.sectionList ul > li {
+	display: inline ; 
+	
+}
+
+.sectionList ul > li:after { content: ', '; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

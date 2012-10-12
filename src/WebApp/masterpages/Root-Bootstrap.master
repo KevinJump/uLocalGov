@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+<!doctype html>
+<head lang="en">
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title><umbraco:Item field="pageTitle" runat="server" /><umbraco:Item field="siteName" insertTextBefore=" - " recursive="true" runat="server" /></title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/css/bootstrap-responsive.min.css" />
+	<asp:contentplaceholder id="styles" runat="server" />
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<asp:contentplaceholder id="metadata" runat="server" />
+	
+</head>
+<body>
+	<asp:contentplaceholder id="content" runat="server" />
+
+	<!-- scripts at the bottom -->
+	<script src="/scripts/jquery-latest.min.js"></script>
+	<script src="/scripts/bootstrap.min.js"></script>
+	
+	<asp:contentplaceholder id="scripts" runat="server" />
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', '<umbraco:Item field="analyticsCode" recursive="true" runat="server" />']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</body> 
+</asp:Content>
