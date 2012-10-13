@@ -72,6 +72,12 @@
 					</div>
 					<asp:ContentPlaceHolder id="footer" runat="server" />
 					<br/>
+					<ul>
+						<li><a href="/news/">News</a></li>
+						<li><a href="/privacy/">Privacy</a></li>
+						<li><a href="/cookies/">Cookies</a></li>
+						<li><a href="/sitemap/">Sitemap</a></li>
+						
 					&copy; 2012
 				</div>
 			</div>
@@ -83,7 +89,6 @@
 	<!-- menus -->
     <script src="/scripts/jquery.hoverIntent.minified.js"></script>
     <script src="/scripts/uLocGov.menu.js"></script>
-
 	<asp:ContentPlaceHolder id="scripts" runat="server" />
 </asp:content>
 
