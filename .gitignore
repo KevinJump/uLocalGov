@@ -5,7 +5,7 @@ src/WebApp/App_Data/
 src/WebApp/aspnet_client/
 src/WebApp/media/created-packages/
 src/WebApp/media/*/Cached/
-src/WebApp/Umbraco/
+src/WebApp/Umbraco/*
 src/WebApp/data/
 src/WebApp/install/
 src/WebApp/umbraco_client/
@@ -16,6 +16,7 @@ src/WebApp/default.aspx
 # put some back in
 !src/WebApp/config/umbracoSettings.config
 !src/WebApp/bin/uLocalgov*
+!src/WebApp/Umbraco/Images/Umbraco/*
 
 # Visual Studio
 *.obj
