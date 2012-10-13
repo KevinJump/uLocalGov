@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Site-Design.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="styles" runat="server">
+	<asp:ContentPlaceHolder id="styles" runat="server" />
+</asp:content>
+
+<asp:content ContentPlaceHolderId="metadata" runat="server">
+	<asp:ContentPlaceHolder id="metadata" runat="server" />
+</asp:content>
+
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<asp:ContentPlaceHolder id="content" runat="server" />
+</asp:content>
+
+<asp:content ContentPlaceHolderId="footer" runat="server">
+	<asp:ContentPlaceHolder id="footer" runat="server" />	
+</asp:content>
+
+<asp:content ContentPlaceHolderId="scripts" runat="server">
+	<asp:ContentPlaceHolder id="scripts" runat="server" />	
+</asp:content>

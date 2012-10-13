@@ -1,0 +1,19 @@
+﻿@* write the letters a-z and link to a-z page *@
+
+@{
+  string letter = string.IsNullOrEmpty(Request.QueryString["letter"]) ? "A" : Request.QueryString["letter"].Substring(0, 1).ToUpper();
+
+  <ul class="letters">
+  
+  @for (char i = 'A'; i <= 'Z'; i++)
+  {
+    string active = "";
+    if ( i.ToString() == letter )
+    {
+        active = "active";
+    }
+    <li class="@active"><a href="/a-z/?letter=@i.ToString()">@i.ToString()</a></li>
+  }
+  </ul>
+}
+   

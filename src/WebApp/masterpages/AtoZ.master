@@ -1,0 +1,17 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SystemPages.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<div class="row">
+		<div class="span12">
+			<div class="pagination">
+				<umbraco:Macro Alias="ULocalGov.Site.WriteAtoZ" runat="server"></umbraco:Macro>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span12">
+			<umbraco:Macro Levels="4" Alias="ULocalGov.Site.AtoZ" runat="server"></umbraco:Macro>
+		</div>
+	</div>
+</asp:content>

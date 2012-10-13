@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SystemPages.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<div class="row">
+		<div class="span12">
+			<h2><umbraco:Item field="pageTitle" runat="server" /></h2>
+			<umbraco:Item field="pageContent" runat="server" />
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="span12">
+			<umbraco:Macro Levels="4" Alias="ULocalGov.Site.Map" runat="server"></umbraco:Macro>
+		</div>
+	</div>
+</asp:content>

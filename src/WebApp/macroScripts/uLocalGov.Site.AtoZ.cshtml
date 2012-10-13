@@ -1,0 +1,19 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+
+@{
+    string letter = string.IsNullOrEmpty(Request.QueryString["letter"]) ? "a" : Request.QueryString["letter"].Substring(0, 1).ToUpper();
+    
+    string whereClause = "pageTitle.ToUpper().StartsWith(\"" + letter + "\") && !umbracoAZHide";  
+}
+
+<h1>@letter</h1>     
+<ul class="pagelist">
+    @foreach (var item in @Model
+                         .AncestorOrSelf()
+                         .DescendantsOrSelf()
+                         .Where(whereClause)
+                         .OrderBy("pageTitle"))
+    {
+        <li><a href="@item.Url">@item.pageTitle</a></li>
+    }
+</ul>
