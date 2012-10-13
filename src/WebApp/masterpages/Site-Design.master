@@ -3,6 +3,7 @@
 <asp:content ContentPlaceHolderId="styles" runat="server">
 	<link rel="stylesheet" href="/css/layout.css" >
 	<link rel="stylesheet" href='<umbraco:Item field="sectionStyle" recursive="true" runat="server" />' />
+	<link rel="stylesheet" href="/css/handicons.css" >
 	<asp:ContentPlaceHolder id="styles" runat="server" />
 </asp:content>
 

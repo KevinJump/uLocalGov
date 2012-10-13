@@ -1,0 +1,67 @@
+/*
+ * Icon style sheet (with some placeholder icons)
+ * 
+ * for speed you might want to minify and merge this stylesheet
+ * consider creating a big sprite image and chopping it up too.
+ */
+
+.icon48 {
+  background-image:url(/img/icons/right.png);
+  width:48px;
+  height:48px;
+  display:block;
+}
+.i48-add          { background-image: url('/img/icons/add.png'); }
+.i48-alert        { background-image: url('/img/icons/alert.png'); }
+.i48-basket-empty { background-image: url('/img/icons/basket-empty.png'); }
+.i48-basket-full  { background-image: url('/img/icons/basket-full.png'); }
+.i48-bin-empty    { background-image: url('/img/icons/bin-empty.png'); }
+.i48-bin-full     { background-image: url('/img/icons/bin-full.png'); }
+.i48-calendar     { background-image: url('/img/icons/calendar.png'); }
+.i48-clasp        { background-image: url('/img/icons/clasp.png'); }
+.i48-clock        { background-image: url('/img/icons/clock.png'); }
+.i48-comment      { background-image: url('/img/icons/comment.png'); }
+.i48-computer     { background-image: url('/img/icons/computer.png'); }
+.i48-configuration{ background-image: url('/img/icons/configuration.png'); }
+.i48-datebase     { background-image: url('/img/icons/database.png'); }
+.i48-disc-cd      { background-image: url('/img/icons/disc-cd.png'); }
+.i48-disc-floopy  { background-image: url('/img/icons/disc-floppy.png'); }
+.i48-download     { background-image: url('/img/icons/download.png'); }
+.i48-earth        { background-image: url('/img/icons/earth.png'); }
+.i48-error        { background-image: url('/img/icons/error.png'); }
+.i48-favourites   { background-image: url('/img/icons/favorites.png'); }
+.i48-file         { background-image: url('/img/icons/file.png'); }
+.i48-graffika.org { background-image: url('/img/icons/graffika.png'); }
+.i48-help         { background-image: url('/img/icons/help.png'); }
+.i48-hint         { background-image: url('/img/icons/hint.png'); }
+.i48-home         { background-image: url('/img/icons/home.png'); }
+.i48-info         { background-image: url('/img/icons/info.png'); }
+.i48-left         { background-image: url('/img/icons/left.png'); }
+.i48-locked       { background-image: url('/img/icons/locked.png'); }
+.i48-mail         { background-image: url('/img/icons/mail.png'); }
+.i48-movie        { background-image: url('/img/icons/movie.png'); }
+.i48-notepad      { background-image: url('/img/icons/notepad.png'); }
+.i48-photo-camera { background-image: url('/img/icons/photo-camera.png'); }
+.i48-picture      { background-image: url('/img/icons/picture.png'); }
+.i48-refresh      { background-image: url('/img/icons/refresh.png'); }
+.i48-remove       { background-image: url('/img/icons/remove.png'); }
+.i48-right        { background-image: url('/img/icons/right.png'); }
+.i48-rss          { background-image: url('/img/icons/rss.png'); }
+.i48-search       { background-image: url('/img/icons/search.png'); }
+.i48-star         { background-image: url('/img/icons/star.png'); }
+.i48-statistic    { background-image: url('/img/icons/statistic.png'); }
+.i48-tag          { background-image: url('/img/icons/tag.png'); }
+.i48-tick         { background-image: url('/img/icons/tick.png'); }
+.i48-timer        { background-image: url('/img/icons/timer.png'); }
+.i48-user-admin   { background-image: url('/img/icons/user-admin.png'); }
+.i48-user-boss    { background-image: url('/img/icons/user-boss.png'); }
+.i48-user-man     { background-image: url('/img/icons/user-man.png'); }
+.i48-user-woman   { background-image: url('/img/icons/user-woman.png'); }
+.i48-users        { background-image: url('/img/icons/users.png'); }
+.i48-wifi-off     { background-image: url('/img/icons/wifi-off.png'); }
+.i48-wifi-on      { background-image: url('/img/icons/wifi-on.png'); }
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
