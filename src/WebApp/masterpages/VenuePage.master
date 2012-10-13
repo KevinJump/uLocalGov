@@ -4,22 +4,61 @@
 	
 </asp:content>
 
-<asp:content ContentPlaceHolderId="metadata" runat="server">
-	
-</asp:content>
-
-<asp:content ContentPlaceHolderId="breadcrumb" runat="server">
-	
-</asp:content>
 
 <asp:content ContentPlaceHolderId="content" runat="server">
-	
-</asp:content>
-
-<asp:content ContentPlaceHolderId="footer" runat="server">
-	
+	<div class="row">
+		<div class="span6">
+			<h2><umbraco:Item field="pageTitle" htmlEncode="true" runat="server" /></h2>
+			<address>
+				<umbraco:Item field="address" convertLineBreaks="true" runat="server" />
+			</address>
+			<div class="contact">
+				<umbraco:Item field="telephone" runat="server" />
+			</div>
+			<h3>Facilities</h3>
+				<umbraco:Item field="facilities" runat="server" />
+			
+			<h3>More info...</h3>
+				<umbraco:Item field="pageContent" runat="server" />
+		</div>
+		<div class="span6">
+			<h2>Map</h2>
+			<div class="well" id="map" style="width:80%; height: 300px;">
+			</div>
+		</div>
+	</div>		
 </asp:content>
 
 <asp:content ContentPlaceHolderId="scripts" runat="server">
-	
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="/scripts/jquery.gmap.min.js"></script>
+	<script type="text/javascript">
+		$(function()
+		  {
+			  $('#map').gMap(
+				  {
+					  latitude: <umbraco:Item field="mapLatitude" runat="server" />,
+					  longitude:<umbraco:Item field="mapLongitude" runat="server" />,
+					  maptype: 'ROADMAP',
+					  zoom: <umbraco:Item field="zoomLevel" runat="server" />,
+					  controls: {
+					  	panControl: true,
+					  	zoomControl: true,
+					  	mapTypeControl: false,
+					  	scaleControl: false,
+					  	streetViewControl: false,
+					  	overviewMapControl: false,
+					  	zoomControlOptions: {
+					  		style: google.maps.ZoomControlStyle.SMALL
+				  		}
+				  	  },
+				  	  markers:[
+				  		{
+				  			latitude: <umbraco:Item field="latitude" runat="server" />,
+				  			longitude: <umbraco:Item field="longitude" runat="server" />,
+				  			html: '<umbraco:Item field="bubbleText" stripParagraph="true" convertLineBreaks="true" runat="server" />'
+				  		}]
+				  });
+		  }) ; 
+	</script>
 </asp:content>
