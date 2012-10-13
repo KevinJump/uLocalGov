@@ -2,7 +2,8 @@
 @inherits umbraco.MacroEngines.DynamicNodeContext
 
 @{
-	if (@Model.HasProperty("contact") && !@Model.IsNull("contact")) {
+	if (@Model.HasProperty("contact") && @Model.HasValue("contact")) {
+		
 		var contact = @Model.NodeById(@Model.Contact);
 		
 		<div class="well">

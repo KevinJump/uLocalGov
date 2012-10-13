@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Site-Design.master" AutoEventWireup="true" %>
+
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<div class="row">
+		<div class="span8">
+			<h2>Email</h2>
+			
+			<!-- form here -->
+			
+			<h2>Telephone</h2>
+			
+			<umbraco:Item field="telephone" runat="server" />
+			
+			<h2>Address</h2>
+			
+			<umbraco:Item field="address" convertLineBreaks="true" runat="server" />
+		</div>
+	</div>
+</asp:content>
