@@ -1,7 +1,7 @@
 ﻿@* write the letters a-z and link to a-z page *@
 
 @{
-  string letter = string.IsNullOrEmpty(Request.QueryString["letter"]) ? "A" : Request.QueryString["letter"].Substring(0, 1).ToUpper();
+  string letter = string.IsNullOrEmpty(Request.QueryString["letter"]) ? "-" : Request.QueryString["letter"].Substring(0, 1).ToUpper();
 
   <ul class="letters">
   

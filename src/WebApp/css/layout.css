@@ -5,6 +5,7 @@
 	margin-top: 1em;
 }
 
+
 /* --------
    Landing Pages : pages with big links that help users get to what they want
    -------- */
@@ -65,11 +66,13 @@ ul.moreLinks{
 }
 
 .icon48 {
-  background-image:url(/images/icons/right.png);
+  background-image:url(/img/icons/right.png);
   width:48px;
   height:48px;
   display:block;
 }
+
+
 
 
 

@@ -8,7 +8,6 @@
 	<asp:ContentPlaceHolder id="metadata" runat="server" />
 </asp:content>
 
-
 <asp:content ContentPlaceHolderId="content" runat="server">
 	<asp:ContentPlaceHolder id="content" runat="server" />
 </asp:content>

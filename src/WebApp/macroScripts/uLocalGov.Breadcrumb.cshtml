@@ -13,7 +13,7 @@ NOTE: It is safe to remove this comment (anything between @ * * @), the code tha
 @inherits umbraco.MacroEngines.DynamicNodeContext
 <ul class="breadcrumb">
 	<li><a href="/">Home</a> <span class="divider">/</span></li>
-	@foreach(var level in @Model.Ancestors().Where("Visible"))
+	@foreach(var level in @Model.Ancestors().Where("visible"))
 	{
 		<li><a href="@level.Url">@level.Name</a> <span class="divider">/</span></li>
 	}

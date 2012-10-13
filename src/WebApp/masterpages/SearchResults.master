@@ -1,0 +1,9 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/SystemPages.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<div class="row">
+		<div class="span12">
+			<umbraco:Macro Alias="ULocalGov.Search" runat="server"></umbraco:Macro>
+		</div>
+	</div>
+</asp:content>

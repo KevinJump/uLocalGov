@@ -30,7 +30,7 @@
 			<div class="span6">
 				<form class="pull-right search-box form-search" action="/search/" method="get">
 				  <div class="input-append">
-    				<input type="text" class="span2 search-query" name="q">
+    				<input type="text" class="span2 search-query" name="q" placeholder="search">
 					  <button type="submit" class="btn"><i class="icon-search"></i></button>
   					</div>
 				</form>
@@ -78,6 +78,9 @@
 			<div class="span12">
 				<br/>
 				<div class="well">
+					<div class="pagination pagination-right visible-desktop">
+						<umbraco:Macro Alias="ULocalGov.Site.WriteAtoZ" runat="server"></umbraco:Macro>
+					</div>
 					<asp:ContentPlaceHolder id="footer" runat="server" />
 					<br/>
 					&copy; 2012
@@ -89,8 +92,6 @@
 
 <asp:content ContentPlaceHolderId="scripts" runat="server">
 	<!-- menus -->
-	<script src="/scripts/libs/jquery.hoverIntent.minified.js"></script>
-    <script src="/scripts/uLocGov.menu.js"></script>
 	<asp:ContentPlaceHolder id="scripts" runat="server" />
 </asp:content>
 

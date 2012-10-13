@@ -9,8 +9,10 @@
 			</div>
 		</div>
 		<div class="span6">
-			<h2><umbraco:Item field="pageTitle" runat="server" /></h2>
-			<umbraco:Item field="pageContent" runat="server" />
+			<asp:ContentPlaceHolder id="content" runat="server">
+				<h2><umbraco:Item field="pageTitle" runat="server" /></h2>
+				<umbraco:Item field="pageContent" runat="server" />
+			</asp:ContentPlaceHolder>
 		</div>
 	</div>
 	

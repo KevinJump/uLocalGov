@@ -1,0 +1,22 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+
+@{
+    int itemCount;
+    if (!int.TryParse(Parameter.itemCount, out itemCount))
+    {
+        itemCount = 10; 
+    }
+}
+<h2>News</h2>
+<dl>
+@foreach (var item in @Model
+            
+            .DescendantsOrSelf("NewsItem")
+            .Where("umbracoNaviHide != true") 
+            .OrderBy("publicationDate")
+            .Take(itemCount))
+{
+    <dt>@item.publicationDate.ToString("dd MMMM yy") : <a href="@item.Url">@item.pageTitle</a></dt>
+    <dd>@item.summary</dd>
+}
+</dl

@@ -1,0 +1,31 @@
+﻿
+@using Examine;
+
+@* Get the search term from query string *@
+@{var searchTerm = Request.QueryString["q"];}
+
+
+<h2>Results for @searchTerm</h2>
+<ul class="search-results">
+@foreach (Examine.SearchResult result in 
+    ExamineManager.Instance.Search(searchTerm, true)) {    
+    
+    <li>
+        <a href="@umbraco.library.NiceUrl(result.Id)">
+            @result.Fields["pageTitle"]
+        </a>       
+        <span>(@result.Score)</span>
+        <div>
+            @if (result.Fields["pageContent"].Length > 100)
+            {
+                @result.Fields["pageContent"].Substring(0, 100);
+            }
+            else
+            {
+                @result.Fields["pageContent"]; 
+            }
+        </div>
+    </li>
+    
+}
+</dl>

@@ -1,0 +1,9 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/StandardPage.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="content" runat="server">
+	<h2><umbraco:Item field="pageTitle" runat="server" /></h2>
+	<div>
+		<umbraco:Item field="pageContent" runat="server" />
+	</div>
+	<umbraco:Macro Alias="ULocalGov.News.ListLatest" runat="server"></umbraco:Macro>
+</asp:content>
