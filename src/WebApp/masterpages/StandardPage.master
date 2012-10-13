@@ -16,6 +16,10 @@
 				<umbraco:Item field="pageContent" runat="server" />
 			</asp:ContentPlaceHolder>
 		</div>
+		<div class="span3">
+			<umbraco:Macro Alias="ULocalGov.RelatedLinks" runat="server"></umbraco:Macro>
+			<umbraco:Macro Alias="ULocalgov.ContactDetails" runat="server"></umbraco:Macro>
+		</div>
 	</div>
 	
 </asp:content>

@@ -8,7 +8,7 @@
 			<umbraco:Item field="pageContent" runat="server" />
 		</div>
 	</div>
-	
-	<umbraco:Macro Alias="ULocalGov.LandingPage.Pages" runat="server" />
+		
+	<umbraco:Macro mainCount="[$mainItemCount]" Alias="uLocalGov.LandingPage.Pages" runat="server"></umbraco:Macro>
 
 </asp:content>

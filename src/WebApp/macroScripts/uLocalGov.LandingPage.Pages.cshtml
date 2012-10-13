@@ -9,10 +9,10 @@
     string mainName = "Straight To...";
     string moreName = "More...";
   
-    if (!Int32.TryParse(@Parameter.mainCount, out mainCount)) { mainCount = 6; }
+    if ( !Int32.TryParse(@Parameter.mainCount, out mainCount)) { mainCount = 6; }
     if ( !String.IsNullOrEmpty(@Parameter.mainSection) ) { mainName = @Parameter.mainName; }
     if ( !String.IsNullOrEmpty(@Parameter.moreName) ) { moreName = @Parameter.moreName; }
-
+	
     var grid = "span4" ;
     int itemsPerRow = 3; 
     if ( (mainCount % 2 == 0) && (mainCount < 6 ) ) { 
@@ -38,7 +38,7 @@
     <div class="@grid">
         <div class="landingItem">
             <a class="landingLink" href="@item.Url">
-                <div class="icon48 i48-@item.icon">&nbsp;</div>                
+				<div class="icon48 @item.icon">&nbsp;</div>
                 <h3>@item.pageTitle</h3>
                 <span class="landingText">
                     @item.summary 

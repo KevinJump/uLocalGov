@@ -1,0 +1,27 @@
+﻿
+@inherits umbraco.MacroEngines.DynamicNodeContext
+
+@{
+	if (@Model.HasProperty("contact") && !@Model.IsNull("contact")) {
+		var contact = @Model.NodeById(@Model.Contact);
+		
+		<div class="well">
+			<h2>Contact</h2>
+			<ul>
+			@if (!@contact.IsNull("email")) 
+			{
+				<li><a href="@contact.Url#email">Email</a></li>
+			}
+			@if (!@contact.IsNull("telephone")) 
+			{
+				<li><a href="@contact.Url#telephone">Telephone</a></li>
+			}
+			@if (!@contact.IsNull("address")) 
+			{
+				<li><a href="@contact.Url#address">Address</a></li>
+			}
+			</ul>
+		</div>
+	}
+	
+}

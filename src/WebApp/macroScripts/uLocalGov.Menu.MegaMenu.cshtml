@@ -1,0 +1,85 @@
+﻿@*
+	Mega-Menus - in the style of liverpool.gov.uk - 
+
+	drowndown menu with a number (defined in each landing page) of items
+	and three features items with icons next to them (first three pages with feature in menu set)
+*@
+
+@inherits umbraco.MacroEngines.DynamicNodeContext
+              
+@{
+    var root = @Model.AncestorOrSelf(); 
+    if (@Model.AncestorOrSelf("SectionHomepage") != null)
+    {
+        root = @Model.AncestorOrSelf("SectionHomepage"); 
+    }
+
+    int menuLength = 6; 
+    if ( root.HasValue("menuLength") ) {
+        menuLength = root.menuLength; 
+    }
+}
+
+<ul class="nav nav-pills">
+    @foreach (var item in @root.LandingPages.Where("!umbracoNaviHide").Take(menuLength) ) 
+    {
+        <li class="drop"><a href="@item.Url">@item.pageTitle</a>
+        @BuildSubMenu(@item) 
+        </li>
+    }
+
+    @if (@root.LandingPages.Where("!umbracoNaviHide").Count() > menuLength)
+    {
+    <li class="drop more"><a href="#">More</a>
+        <div class="menudrop">
+            <ul>
+            @foreach( var item in @root.LandingPages.Where("!umbracoNaviHide").Skip(menuLength) ) {
+                <li><a href="@item.Url">@item.pageTitle</a></li>
+            }
+            </ul>
+        </div>
+    </li>
+    }
+</ul>
+
+@helper BuildSubMenu(dynamic node)
+{   
+    int itemCount = 4; 
+    if ( node.HasValue("menuItemCount")) {
+        itemCount = node.menuItemCount; 
+    }
+    
+    var items = node.Children.Where("!umbracoNaviHide").Take(itemCount); 
+    if ( items.Count() > 0 ) {
+        <div class="menudrop">
+            <ul>
+               @foreach (var item in items)
+               {
+                <li><a href="@item.Url">@item.pageTitle</a></li>   
+               }
+               @if ( node.Children.Where("!umbracoNaviHide").Count() > itemCount ) {
+                <li><a href="@node.Url">View All...</a></li>
+               }
+            </ul>
+
+            @{
+                var featuredItems = node.Children.Where("featureInMenu").Take(3); 
+            }
+            @if ( featuredItems.Count() > 0 ) {
+             <ul class="featured">
+                <li>
+                @foreach(var feature in featuredItems)
+                {
+                    <a href="@feature.Url">
+                        <div class="icon48 @feature.icon">&nbsp;</div>
+                        <span class="featuredTitle">@feature.pageTitle</span>
+                        <span class="featuredText">@feature.summary</span>
+                    </a>
+                }            
+                </li>
+             </ul>   
+            }
+        </div>
+    }
+    
+}

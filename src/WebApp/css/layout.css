@@ -5,6 +5,76 @@
 	margin-top: 1em;
 }
 
+/* -------- 
+   'Megamenu' : Drop down menu, with left hand nav and righthand features
+   -------- */
+
+/* Drop Down Dimensions - Set here */
+.menudrop { width: 360px; } /* whole drop down */
+.menudrop ul { width: 160px; } /* main nav list (left) */
+.menudrop ul.featured { width: 200px; } /* featured list (right) */
+.more .menudrop { width: 160px; } /* more menu - (just left hand) */
+
+/* Rest of 'megamenu' functionality */
+.menudrop {
+  display: none; 
+  position: absolute;
+  top: 155px;
+  background-color: #FCFCFC;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-bottom-left-radius: 4px ;
+  border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-bottom-right-radius: 4px ;
+  border-bottom-right-radius: 4px;
+  box-shadow: 3px 3px 4px #DDD; 
+  padding: 10px 0;
+}
+
+.menudrop ul { 
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  float: left ;
+}
+
+.menudrop li { 
+  padding: 0;
+  margin: 0;  
+}
+
+.menudrop a { 
+  display: block; 
+  padding: 10px 8px; 
+  margin: 0; 
+  line-height: 1.1em;
+}
+
+.more 
+{
+    padding-right: 20px;
+}
+
+.featured {
+  float: left;
+}
+
+.featured .icon48 
+{
+    float: left; 
+}
+
+.featuredTitle, .featuredText 
+{
+    margin-left: 52px;
+    display: block; 
+}
+
+.featuredTitle 
+{
+    font-weight: bold ; 
+}
+
 
 /* --------
    Landing Pages : pages with big links that help users get to what they want
@@ -27,7 +97,7 @@
 }
 
 .landingLink > .icon48 {
-  float: left ; 
+	float:left;
 }
 
 .landingLink > .landingText {
@@ -64,6 +134,16 @@ ul.moreLinks{
   padding: 4px 10px;
   background:url(/images/crumb.gif) no-repeat right center;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

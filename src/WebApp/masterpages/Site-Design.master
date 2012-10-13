@@ -3,7 +3,7 @@
 <asp:content ContentPlaceHolderId="styles" runat="server">
 	<link rel="stylesheet" href="/css/layout.css" >
 	<link rel="stylesheet" href='<umbraco:Item field="sectionStyle" recursive="true" runat="server" />' />
-	<link rel="stylesheet" href="/css/handicons.css" >
+	<link rel="stylesheet" href="/css/typicons.css" />
 	<asp:ContentPlaceHolder id="styles" runat="server" />
 </asp:content>
 
@@ -47,21 +47,9 @@
 		<!-- menu -->
 		<div class="row">
 			<div class="span12">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<div class="container">
-							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        						<span class="icon-bar"></span>
-        						<span class="icon-bar"></span>
-        						<span class="icon-bar"></span>
-							</a>
-							
-							<div class="nav-collapse">
-        						<umbraco:Macro Alias="ULocalGov.Menu.SectionMenu" runat="server"></umbraco:Macro>
-      						</div>
-						</div>
-					</div>
-				</div>
+				<nav class="sectionNav">
+					<umbraco:Macro Alias="ULocalGov.Menu.MegaMenu" runat="server"></umbraco:Macro>
+				</nav>
 			</div>
 		</div>
 		
@@ -93,6 +81,9 @@
 
 <asp:content ContentPlaceHolderId="scripts" runat="server">
 	<!-- menus -->
+    <script src="/scripts/jquery.hoverIntent.minified.js"></script>
+    <script src="/scripts/uLocGov.menu.js"></script>
+
 	<asp:ContentPlaceHolder id="scripts" runat="server" />
 </asp:content>
 
