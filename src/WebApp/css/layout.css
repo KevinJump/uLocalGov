@@ -75,6 +75,10 @@
     font-weight: bold ; 
 }
 
+.news-block {
+	height: 200px; 
+}
+
 
 /* --------
    Landing Pages : pages with big links that help users get to what they want
@@ -134,6 +138,8 @@ ul.moreLinks{
   padding: 4px 10px;
   background:url(/images/crumb.gif) no-repeat right center;
 }
+
+
 
 
 

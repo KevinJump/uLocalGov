@@ -1,0 +1,38 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+
+@{
+  int itemCount ;
+  if (!Int32.TryParse(@Parameter.itemCount, out itemCount)) { itemCount = 3; }
+	
+  string active ; 
+  active = "active" ; 
+}
+
+<div class="news-block carousel slide" id="newsBlock">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+	  
+    @foreach (var item in @Model
+        .AncestorOrSelf(1)
+        .DescendantsOrSelf("NewsItem")
+        .Where("(homepageDate > DateTime.Now )")
+        .OrderBy("homepageDate")
+        .Take(itemCount))
+      {  
+	 
+       <div class="item @active">
+          <img src="http://placehold.it/370x250">
+          <div class="carousel-caption">
+            <h4><a href="@item.Url">@item.pageTitle</a></h4>
+            <p>@item.summary</p>
+          </div>
+       </div>
+			  
+	    active = "";
+      }
+
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#newsBlock" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#newsBlock" data-slide="next">&rsaquo;</a>
+</div>

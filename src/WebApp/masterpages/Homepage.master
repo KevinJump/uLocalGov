@@ -6,11 +6,14 @@
 
 <asp:content ContentPlaceHolderId="content" runat="server">
 	<div class="row">
-		<div class="span12">
+		<div class="span8">
 			<div class="hero-unit">
 				<h2>Welcome to <umbraco:Item field="siteName" runat="server" /></h2>
 				<umbraco:Item field="pageContent" runat="server" />
 			</div>
+		</div>
+		<div class="span4">
+			<umbraco:Macro Alias="uLocalGov.News.Featured" itemCount="3" runat="server" />
 		</div>
 	</div>
 	
