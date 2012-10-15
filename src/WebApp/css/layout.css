@@ -5,6 +5,17 @@
 	margin-top: 1em;
 }
 
+.footer {
+	margin-top: 1em;
+	background-color: whiteSmoke ; 
+	border-radius: 4px;
+	color: #444;
+}
+
+
+.footer a { color: #444; }
+.footer ul { list-style: none; padding: 0 1em;}
+
 /* -------- 
    'Megamenu' : Drop down menu, with left hand nav and righthand features
    -------- */
@@ -138,6 +149,10 @@ ul.moreLinks{
   padding: 4px 10px;
   background:url(/images/crumb.gif) no-repeat right center;
 }
+
+
+
+
 
 
 

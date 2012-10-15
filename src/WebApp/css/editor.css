@@ -1,8 +1,20 @@
-/* editor stylesheet - placeholder for the editor options 
-   no styles in this sheet */
+/* editor stylesheet - placeholder for the editor options  
+
+	very little is needed - this just makes the editor nicer to use
+	the editor also uses bootstrap, so editing will look like the
+	site.
+
+*/
+
+
+
 
 /* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
 h1 {
+
+}
+
+.btn btn-large btn-primary {
 
 }
 
@@ -18,34 +30,15 @@ h4 {
 
 }
 
-
-
-/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
-h1 {
+.alert alert-info {
 
 }
 
-h2 {
+.alert alert-important {
 
 }
 
-h3 {
-
-}
-
-h4 {
-
-}
-
-.alert .alert-info {
-
-}
-
-.alert .alert-important {
-
-}
-
-.alert.alert-warning {
+.alert alert-warning {
 
 }
 

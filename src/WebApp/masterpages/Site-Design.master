@@ -2,7 +2,7 @@
 
 <asp:content ContentPlaceHolderId="styles" runat="server">
 	<link rel="stylesheet" href="/css/layout.css" >
-	<link rel="stylesheet" href='<umbraco:Item field="sectionStyle" recursive="true" runat="server" />' />
+	<link rel="stylesheet" href='/css/<umbraco:Item field="sectionStyle" recursive="true" runat="server" />' />
 	<link rel="stylesheet" href="/css/typicons.css" />
 	<asp:ContentPlaceHolder id="styles" runat="server" />
 </asp:content>
@@ -65,23 +65,31 @@
 		
 		<div class="row">
 			<div class="span12">
-				<br/>
-				<div class="well">
-					<div class="pagination pagination-right visible-desktop">
-						<umbraco:Macro Alias="ULocalGov.Site.WriteAtoZ" runat="server"></umbraco:Macro>
+				<div class="footer">
+				<div class="row">
+					<div class="span12">
+						<div class="pagination pagination-right visible-desktop">
+							<umbraco:Macro Alias="ULocalGov.Site.WriteAtoZ" runat="server"></umbraco:Macro>
+						</div>
 					</div>
-					<asp:ContentPlaceHolder id="footer" runat="server" />
-					<br/>
-					<ul>
-						<li><a href="/news/">News</a></li>
-						<li><a href="/privacy/">Privacy</a></li>
-						<li><a href="/cookies/">Cookies</a></li>
-						<li><a href="/sitemap/">Sitemap</a></li>
-						
-					&copy; 2012
+				</div>
+				<div class="row">
+					<div class="span6">
+						<ul>
+							<li><a href="/news/">News</a></li>
+							<li><a href="/privacy/">Privacy</a></li>
+							<li><a href="/cookies/">Cookies</a></li>
+							<li><a href="/sitemap/">Sitemap</a></li>
+						</ul>
+					</div>
+					<div class="span6">
+						<strong>social, media, icons?</strong>
+					</div>
+				</div>
 				</div>
 			</div>
-		</div>		
+		</div>
+		<asp:ContentPlaceHolder id="footer" runat="server" />
 	</div>	
 </asp:content>
 

@@ -3,18 +3,25 @@
 
 <asp:content ContentPlaceHolderId="content" runat="server">
 	<div class="row">
+		<div class="span2">&nbsp;</div>
 		<div class="span8">
 			<h2>Email</h2>
 			
 			<!-- form here -->
+			<p>your form system of choice here... (umbraco has 
+				<a href="http://umbraco.com/products/more-add-ons/contour.aspx">Contour</a> )
+			</p>
 			
 			<h2>Telephone</h2>
 			
-			<umbraco:Item field="telephone" runat="server" />
+			<strong><umbraco:Item field="telephone" runat="server" /></strong>
 			
 			<h2>Address</h2>
 			
 			<umbraco:Item field="address" convertLineBreaks="true" runat="server" />
+			
+			<h2>More...</h2>
+			<p>... other contact types you might want?</p>
 		</div>
 	</div>
 </asp:content>
