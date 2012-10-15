@@ -18,17 +18,32 @@
         .Where("(homepageDate > DateTime.Now )")
         .OrderBy("homepageDate")
         .Take(itemCount))
-      {  
-	 
-       <div class="item @active">
-          <img src='@item.Media("image", "umbracoFile")'  width="370px" height="250px">
-          <div class="carousel-caption">
-            <h4><a href="@item.Url">@item.pageTitle</a></h4>
-            <p>@item.summary</p>
-          </div>
-       </div>
-			  
-	    active = "";
+      { 
+		  
+@* The package fills the image value with junk
+   (because media files are copied but not put in DB)
+
+   must be a better way of doing this? but can't see how
+   to test that value in image is valid media without 
+   tripping an exception.
+*@
+		  
+		  var imgsrc = "http://placehold.it/370x250" ;
+		  try { 
+		  		imgsrc = @item.Media("image").umbracoFile;
+		  }
+		  catch { } 
+
+			
+		  <div class="item @active">
+			  <img src='@imgsrc' width="370px" height="250px">
+			  <div class="carousel-caption">
+				  <h4><a href="@item.Url">@item.pageTitle</a></h4>
+				  <p>@item.summary</p>
+			  </div>
+		  </div>
+				  
+	      active = "";
       }
 
   </div>
